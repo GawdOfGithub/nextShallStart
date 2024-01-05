@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from "@/app/components/ui/ThemeContext"
 import ModeToggle from './page'
 import Providers from '@/app/components/provider'
+import { ClerkProvider } from '@clerk/nextjs'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
    
     <html lang="en" suppressHydrationWarning>
        
@@ -37,6 +39,7 @@ export default function RootLayout({
       
      
     </html>
+    </ClerkProvider>
   
   )
 }
