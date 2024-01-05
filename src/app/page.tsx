@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 const page = () => {
   return (
     <>
-   
+   Hello shadcn and next ui
     </>
   )
 }
